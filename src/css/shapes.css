@@ -1,0 +1,358 @@
+/* https://css-tricks.com/the-shapes-of-css/ */
+
+.shapes-place {
+    /* margin-left: 5vh;
+    margin-top: 5vh; */
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+}
+
+.trapezoid {
+    border-bottom: 100px solid red;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+}
+
+.parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(20deg);
+    background: red;
+}
+
+.star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+.star-five:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+.star-five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+.pentagon {
+    position: relative;
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: red transparent;
+}
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
+}
+
+.hexagon {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: relative;
+}
+.hexagon:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid red;
+}
+.hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid red;
+}
+
+.octagon {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+}
+.octagon:before {
+    content: "";
+    width: 100px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 29px solid red;
+    border-left: 29px solid #eee;
+    border-right: 29px solid #eee;
+}
+.octagon:after {
+    content: "";
+    width: 100px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 29px solid red;
+    border-left: 29px solid #eee;
+    border-right: 29px solid #eee;
+}  
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -50px;
+}
+.diamond:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red;
+}
+
+.cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+    border-width: 0 25px 25px 25px;
+    height: 0;
+    width: 50px;
+    box-sizing: content-box;
+    position: relative;
+    margin: 20px 0 50px 0;
+}
+.cut-diamond:after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+    border-width: 70px 50px 0 50px;
+}
+
+.pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid red;
+    border-left: 60px solid red;
+    border-bottom: 60px solid red;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.yin-yang {
+    width: 96px;
+    box-sizing: content-box;
+    height: 48px;
+    background: #eee;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+}
+.yin-yang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #eee;
+    border: 18px solid red;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+.yin-yang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: red;
+    border: 18px solid #eee;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+
+.space-invader {
+    box-shadow: 0 0 0 1em red,
+    0 1em 0 1em red,
+    -2.5em 1.5em 0 .5em red,
+    2.5em 1.5em 0 .5em red,
+    -3em -3em 0 0 red,
+    3em -3em 0 0 red,
+    -2em -2em 0 0 red,
+    2em -2em 0 0 red,
+    -3em -1em 0 0 red,
+    -2em -1em 0 0 red,
+    2em -1em 0 0 red,
+    3em -1em 0 0 red,
+    -4em 0 0 0 red,
+    -3em 0 0 0 red,
+    3em 0 0 0 red,
+    4em 0 0 0 red,
+    -5em 1em 0 0 red,
+    -4em 1em 0 0 red,
+    4em 1em 0 0 red,
+    5em 1em 0 0 red,
+    -5em 2em 0 0 red,
+    5em 2em 0 0 red,
+    -5em 3em 0 0 red,
+    -3em 3em 0 0 red,
+    3em 3em 0 0 red,
+    5em 3em 0 0 red,
+    -2em 4em 0 0 red,
+    -1em 4em 0 0 red,
+    1em 4em 0 0 red,
+    2em 4em 0 0 red;
+    background: red;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    margin: 50px 0 70px 65px;
+}
+
+.lock {
+    font-size: 8px;
+    position: relative;
+    width: 18em;
+    height: 13em;
+    border-radius: 2em;
+    top: 10em;
+    box-sizing: border-box;
+    border: 3.5em solid red;
+    border-right-width: 7.5em;
+    border-left-width: 7.5em;
+    margin: 0 0 6rem 0;
+}
+.lock:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: 2.5em solid red;
+    width: 14em;
+    height: 12em;
+    left: 50%;
+    margin-left: -7em;
+    top: -12em;
+    border-top-left-radius: 7em;
+    border-top-right-radius: 7em;
+}
+.lock:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: 1em solid red;
+    width: 5em;
+    height: 8em;
+    border-radius: 2.5em;
+    left: 50%;
+    top: -1em;
+    margin-left: -2.5em;
+}
